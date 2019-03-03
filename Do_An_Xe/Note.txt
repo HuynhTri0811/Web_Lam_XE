@@ -1,0 +1,14 @@
+----------HangSanXuat------
+1 - SamSung
+2 - OPPO
+3 - Xiami
+4 - Iphone
+5 - Nokia
+----------LoaiSanPham-----
+1 - Điện Thoại
+2 - Máy tính bảng
+3 - Tay nghe
+4 - Pin dự phòng
+
+
+
