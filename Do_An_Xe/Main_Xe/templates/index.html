@@ -6,26 +6,36 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     {% load static %}
     <link rel="stylesheet" href="{% static 'css/style.css' %}" type="text/css"/>
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}" type="text/css"/>
     <title>Document</title>
 </head>
 <body>
     <div id="header">
-        <nav>
+        <div id="sreach">
             <form action="./">
                 <input type="text" size="20"/>
+                <input type="submit" size="20" title="Tìm kiếm" value="Tìm kiếm"/>
             </form>
-        </nav>
-        <nav id="menu_loaisanpham">
-            {% block menuloaisanpham %}
-                you are wrong something
-            {% endblock%}
-        </nav>
+        </div>
+        <div id="menu_loaisanpham">
+            {% if List_Menu_SanPham %}
+            <ul class="list-group list-group-horizontal LoaiSanPham">
+                {% for LoaiSanPham in List_Menu_SanPham %}
+                <li class="list-group-item list-group-item-action list-group-item-info"><a href="/LoaiSanPham/{{LoaiSanPham.MaLoaiSanPham}}">{{LoaiSanPham.TenLoaiSanPham}}</a></li>
+                {% endfor %}
+            </ul>
+            {% else %}
+                <p>no </p>
+            {% endif %}
+        </div>
     </div>
     <div id="Menu_HangSanXuat">
-
+        {{ content }}
     </div>
     <div id="content">
-
+        {% block content %}
+            abc
+        {% endblock %}
     </div>
     <div id="footer">
         Design by sudent of FIT - HCMUS

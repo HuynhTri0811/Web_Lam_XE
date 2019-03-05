@@ -66,6 +66,12 @@ TEMPLATES = [
             ],
         },
     },
+    {
+        'BACKEND': 'django.template.backends.jinja2.Jinja2',
+        'DIRS': [
+            '/home/html/jinja2',
+        ],
+    },
 ]
 
 WSGI_APPLICATION = 'Do_An_Xe.wsgi.application'
@@ -121,5 +127,6 @@ USE_TZ = True
 STATIC_URL = '/static/'
 
 STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, "static")
+    os.path.join(BASE_DIR,"static"),'/var/www/static',
 ]
+STATIC_ROOT = os.path.join(os.path.dirname(BASE_DIR),"static")
