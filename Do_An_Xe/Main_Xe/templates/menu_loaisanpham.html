@@ -1,9 +1,0 @@
-{% if List_Menu_SanPham %}
-<ul class="list-group list-group-horizontal LoaiSanPham">
-    {% for LoaiSanPham in List_Menu_SanPham %}
-    <li class="list-group-item list-group-item-action list-group-item-info"><a href="/LoaiSanPham/{{LoaiSanPham.MaLoaiSanPham}}">{{LoaiSanPham.TenLoaiSanPham}}</a></li>
-    {% endfor %}
-</ul>
-{% else %}
-    <p>no </p>
-{% endif %}

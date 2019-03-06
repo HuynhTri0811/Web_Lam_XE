@@ -12,7 +12,7 @@ class LoaiSanPham(models.Model):
 class HangSanXuat(models.Model):
     MaHangSanXuat   = models.AutoField(auto_created=True,primary_key=True,serialize=False,verbose_name="ID_HangSanXuat")
     TenHangSanXuat  = models.CharField(max_length=100)
-    HinhURL_HSX     = models.CharField(max_length=100,null=True)
+    HinhURL_HSX     = models.ImageField(upload_to='Node',blank=True)
     BiXoa           = models.IntegerField(default=0) 
 
     def __str__(self):
